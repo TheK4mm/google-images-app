@@ -11,24 +11,24 @@ API key fuera del navegador.
 
 ---
 
-## ✨ Características
+## Características
 
-- 🔎 **Búsqueda en tiempo real** de Google Images vía SerpApi, con resultados JSON estructurados.
-- 🧱 **Galería tipo masonry** responsive con carga diferida (`lazy`) y skeletons mientras carga.
-- 🖼️ **Lightbox accesible**: imagen original, navegación con teclado (← / → / Esc), copiar enlace,
+- **Búsqueda en tiempo real** de Google Images vía SerpApi, con resultados JSON estructurados.
+- **Galería tipo masonry** responsive con carga diferida (`lazy`) y skeletons mientras carga.
+- **Lightbox accesible**: imagen original, navegación con teclado (← / → / Esc), copiar enlace,
   abrir página de origen, focus-trap y bloqueo de scroll.
-- 📜 **Paginación real** usando el parámetro `ijn` de Google Images, con "cargar más" e
+- **Paginación real** usando el parámetro `ijn` de Google Images, con "cargar más" e
   _infinite scroll_ (IntersectionObserver).
-- 🎛️ **Filtros**: tamaño, tipo, color y SafeSearch, expuestos desde el backend de SerpApi.
-- 🌗 **Tema claro/oscuro** persistente (sin parpadeo) y **búsquedas recientes** en `localStorage`.
-- ♿ **Accesibilidad y UX**: estados explícitos (inicial, cargando, error con reintento, sin
+- **Filtros**: tamaño, tipo, color y SafeSearch, expuestos desde el backend de SerpApi.
+- **Tema claro/oscuro** persistente (sin parpadeo) y **búsquedas recientes** en `localStorage`.
+- **Accesibilidad y UX**: estados explícitos (inicial, cargando, error con reintento, sin
   resultados), `alt` descriptivos, foco visible y diseño _mobile-first_.
-- 🔐 **Backend endurecido**: validación con Zod, `helmet`, CORS restringido, rate limiting y
+- **Backend endurecido**: validación con Zod, `helmet`, CORS restringido, rate limiting y
   manejo de errores centralizado (sin filtrar detalles al cliente).
 
 ---
 
-## 🧰 Stack
+## Stack
 
 | Capa     | Tecnologías                                                       |
 | -------- | ----------------------------------------------------------------- |
@@ -39,7 +39,7 @@ API key fuera del navegador.
 
 ---
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ```
 Navegador ──(/api/images?q=…)──▶  Express (proxy)  ──(getJson)──▶  SerpApi ──▶  Google Images
@@ -68,7 +68,7 @@ google-images-app/
 
 ---
 
-## 🚀 Puesta en marcha
+## Puesta en marcha
 
 ### Requisitos
 
@@ -102,7 +102,7 @@ mismo-origen (sin CORS) y no hace falta configurar URLs.
 
 ---
 
-## 📜 Scripts
+## Scripts
 
 Desde la raíz del repositorio:
 
@@ -118,7 +118,7 @@ Desde la raíz del repositorio:
 
 ---
 
-## 🔌 API
+## API
 
 ### `GET /api/images`
 
@@ -160,7 +160,7 @@ Comprobación de readiness: `{ "status": "ok", "timestamp": "…" }`.
 
 ---
 
-## 🔐 Variables de entorno (servidor)
+## Variables de entorno (servidor)
 
 | Variable                | Default                 | Descripción                              |
 | ----------------------- | ----------------------- | ---------------------------------------- |
@@ -178,7 +178,7 @@ El cliente admite `VITE_API_BASE_URL` para apuntar a la API en producción (en d
 
 ---
 
-## 🧪 Calidad
+## Calidad
 
 ```bash
 npm run lint        # ESLint
@@ -188,7 +188,6 @@ npm test            # Vitest (api, reducer de búsqueda, componentes)
 
 ---
 
-## 📝 Créditos
+## Créditos
 
 Datos de imágenes proporcionados por [SerpApi — Google Images Results](https://serpapi.com).
-Construido con React, Express y Tailwind CSS.
