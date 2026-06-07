@@ -1,4 +1,4 @@
-# PixelFind — Google Images Application with API
+# Google Images Application with API
 
 Buscador de imágenes de **Google en tiempo real** con una interfaz moderna, accesible y
 responsive. El frontend (React + TypeScript + Tailwind CSS) consume un backend ligero de
